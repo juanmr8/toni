@@ -26,8 +26,19 @@ before/while the PRD hardens. Kickoff grill working notes:
   work productivity): who exists, how they died or survive, pricing.
 - Pricing comps around the $15/mo anchor and a $5–8 entry tier.
 - iOS capability check: EventKit (calendar + Reminders), App Intents
-  (Siri/Shortcuts), on-device speech-to-text for voice notes, local
-  user-owned notes storage. What the sandbox actually allows.
-- LLM cost model per active user under the rate-limit chunking idea;
-  which tasks route to cheaper models.
+  (Siri/Shortcuts), on-device speech-to-text for voice notes
+  (SFSpeechRecognizer / SpeechAnalyzer — default assumption:
+  on-device, free), local user-owned notes storage. What the sandbox
+  actually allows.
+- Timer: the Clock app has no public API to start a timer. Candidate
+  routes: in-app timer + Live Activity (v1 default), a user-installed
+  Shortcut Toni triggers, AlarmKit (iOS 26+). Decide in build.
+- LLM cost model per active user under the rate-limit chunking idea.
+  The gateway routes per task through the Vercel AI SDK, so model
+  choice is config. Decided tier → model: cheaper tiers on Sonnet 5
+  (agent) + Haiku 4.5 (background), premium tier on Opus 5; prompt
+  caching on. Rough cached cost: ~$0.010/turn Sonnet, ~$0.017/turn
+  Opus → ~$6 / ~$10 per month at 20 turns/day. Open: actual turns/day
+  from the cohort's spend log, and whether a non-Anthropic model
+  beats Sonnet on secretary judgment for the entry tier.
 - Free-time / screen-time stats worth citing on the landing page.
