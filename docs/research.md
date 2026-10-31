@@ -1,5 +1,7 @@
 # Research — feeding the PRD
 
+> **Note (Oct 2026):** partly outdated. The current architectural direction is in [`always-on-agent.md`](always-on-agent.md); read that first.
+
 What we know, what we assume, and what still needs looking into
 before/while the PRD hardens. Kickoff grill working notes:
 `~/vault/vault/products/toni/kickoff-grill.md`.

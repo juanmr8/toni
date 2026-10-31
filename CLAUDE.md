@@ -8,7 +8,8 @@ Lean index; product knowledge lives in the vault
 - `Record.md` — continual-improvement journal (thoughts, frustrations,
   improvement points). Not a status doc: stage/status/next-step live
   in Linear.
-- `docs/research.md` — market/positioning research feeding the PRD.
+- `docs/always-on-agent.md` — **start here.** Always-on agent architecture (Oct 2026): the framework Toni is built along.
+- `docs/research.md` — market/positioning research feeding the PRD (Aug 2026, partly outdated).
 - `CONTEXT.md` — domain glossary. Read before exploring; its terms win.
 - `docs/adr/` — architectural decisions.
 
